@@ -43,33 +43,33 @@ getFiltersFromTable<-function(data) {
     filterCol<-
       switch(class(data[,i]),
              character=list(
-                   id= namesCol[i],
-                   label= niceNames[i],
-                   type= 'string',
-                   default_value=data[1,i],
+                   id= 'coupon',
+                   label= 'coupon',
+                   type= 'float',
+                   default_value=3,
                    operators=list('equal','not_equal','contains', 'in', 'not_in','begins_with', 'ends_with','is_null', 'is_not_null')),
              factor={
                values<-setdiff(levels(data[,i]),"")
                list(
-                 id= namesCol[i],
-                 label= niceNames[i],
-                 type= 'string',
+                 id= 'maturity',
+                 label= 'maturity',
+                 type= 'datetime',
                  input='select',
                  values=values,
-                 default_value=values[1],
+                 default_value='01/01/2020',
                  operators=list('equal','not_equal','contains', 'in', 'not_in','is_null', 'is_not_null'))
              },
              integer=list(
-               id= namesCol[i],
-               label= niceNames[i],
-               type= 'integer',
-               default_value=data[1,i],
+               id= 'price',
+               label= 'price',
+               type= 'float',
+               default_value=100,
                operators=list('equal','not_equal','less', 'less_or_equal', 'greater','greater_or_equal','between','in', 'not_in','is_null', 'is_not_null')),
              numeric=list(
-               id= namesCol[i],
-               label= niceNames[i],
-               type= 'double',
-               default_value=data[1,i],
+               id= 'yeild',
+               label= 'yeild',
+               type= 'float',
+               default_value=3,
 #                validation=list(
 #                  min= 0,
 #                  step= 0.01
