@@ -35,7 +35,8 @@ nameToId <- function(x) {
 #'
 getFiltersFromTable<-function() {
   filters<-list()
-  filterCol <- list( id= 'coupon',
+  filterCol <- (
+                  list( id= 'coupon',
                   label= 'coupon',
                   type= 'float',
                   default_value=3,
@@ -55,6 +56,7 @@ getFiltersFromTable<-function() {
                   type= 'float',
                   default_value=3,
                   operators=list('equal','not_equal',  'less', 'less_or_equal', 'greater','greater_or_equal','between','is_null', 'is_not_null'))
+              )
     filters<-c(filters,filterCol)
   filters
 }
