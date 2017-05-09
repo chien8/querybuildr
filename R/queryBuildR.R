@@ -39,7 +39,14 @@ getFiltersFromTable<-function() {
   namesCol<-colnames(data)
   niceNames<-as.vector(sapply(namesCol,idToName))
   filterCol = list(
-                  list( id= 'coupon',
+              list( id= 'Callable',
+                  label= 'Callable',
+                  type= 'string',
+                  input = 'select',
+                  values = c('Yes', 'No', 'NA'),
+                  default_value='Yes',
+                  operators=list('equal','not_equal','contains', 'in', 'not_in','is_null', 'is_not_null')),
+               list( id= 'coupon',
                   label= 'coupon',
                   type= 'double',
                   default_value=3,
