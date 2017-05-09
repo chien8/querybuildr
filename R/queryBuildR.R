@@ -35,27 +35,27 @@ nameToId <- function(x) {
 #'
 getFiltersFromTable<-function() {
   filters<-list()
-  filterCol<-list(
-               id= 'coupon',
-               label= 'coupon',
-               type= 'float',
-               default_value=3,
-               operators=list('equal','not_equal','contains', 'in', 'not_in','begins_with', 'ends_with','is_null', 'is_not_null')),
-               id= 'maturity',
-               label= 'maturity',
-               type= 'datetime',
-               default_value='01/01/2020',
-               operators=list('equal','not_equal','contains', 'in', 'not_in','is_null', 'is_not_null'))},
-               id= 'price',
-               label= 'price',
-               type= 'float',
-               default_value=100,
-               operators=list('equal','not_equal','less', 'less_or_equal', 'greater','greater_or_equal','between','in', 'not_in','is_null', 'is_not_null')),
-               id= 'yeild',
-               label= 'yeild',
-               type= 'float',
-               default_value=3,
-               operators=list('equal','not_equal',  'less', 'less_or_equal', 'greater','greater_or_equal','between','is_null', 'is_not_null'))
+  filterCol1 <-list( 
+              list( id= 'coupon',
+                  label= 'coupon',
+                  type= 'float',
+                  default_value=3,
+                  operators=list('equal','not_equal','contains', 'in', 'not_in','begins_with', 'ends_with','is_null', 'is_not_null')),
+               list( id= 'maturity',
+                  label= 'maturity',
+                  type= 'datetime',
+                  default_value='01/01/2020',
+                  operators=list('equal','not_equal','contains', 'in', 'not_in','is_null', 'is_not_null')),
+               list( id= 'price',
+                  label= 'price',
+                  type= 'float',
+                  default_value=100,
+                  operators=list('equal','not_equal','less', 'less_or_equal', 'greater','greater_or_equal','between','in', 'not_in','is_null', 'is_not_null')),
+               list(id= 'yeild',
+                  label= 'yeild',
+                  type= 'float',
+                  default_value=3,
+                  operators=list('equal','not_equal',  'less', 'less_or_equal', 'greater','greater_or_equal','between','is_null', 'is_not_null'))
              )
     filters<-c(filters,list(filterCol))
   filters
