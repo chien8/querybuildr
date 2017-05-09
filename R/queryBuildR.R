@@ -41,7 +41,7 @@ getFiltersFromTable<-function() {
   filterCol = list(
                   list( id= 'coupon',
                   label= 'coupon',
-                  type= 'float',
+                  type= 'double',
                   default_value=3,
                   operators=list('equal','not_equal','less', 'less_or_equal', 'greater','greater_or_equal','between','in', 'not_in','is_null', 'is_not_null')),
                list( id= 'maturity',
@@ -51,12 +51,12 @@ getFiltersFromTable<-function() {
                   operators=list('equal','not_equal','less', 'less_or_equal', 'greater','greater_or_equal','between','in', 'not_in','is_null', 'is_not_null')),
                list( id= 'price',
                   label= 'price',
-                  type= 'float',
+                  type= 'double',
                   default_value=100,
                   operators=list('equal','not_equal','less', 'less_or_equal', 'greater','greater_or_equal','between','in', 'not_in','is_null', 'is_not_null')),
                list(id= 'yeild',
                   label= 'yeild',
-                  type= 'float',
+                  type= 'double',
                   default_value=3,
                   operators=list('equal','not_equal','less', 'less_or_equal', 'greater','greater_or_equal','between','in', 'not_in','is_null', 'is_not_null'))
               )
