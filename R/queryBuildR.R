@@ -35,7 +35,7 @@ nameToId <- function(x) {
 #'
 getFiltersFromTable<-function() {
   filters<-list()
-  filterCol1 <-list( 
+  filterCol <-list( 
               list( id= 'coupon',
                   label= 'coupon',
                   type= 'float',
