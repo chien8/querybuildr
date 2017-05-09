@@ -36,10 +36,9 @@ nameToId <- function(x) {
 getFiltersFromTable<-function(data) {
   filters<-list()
 
-  namesCol<-colnames(data)
+  namesCol<-data
   niceNames<-as.vector(sapply(namesCol,idToName))
-  print(namesCol)
-  for (i in 1:ncol(data)) {
+  for (i in 1:5) {
 
     filterCol<-
       switch(class(data[,i]),
