@@ -35,6 +35,9 @@ nameToId <- function(x) {
 #'
 getFiltersFromTable<-function() {
   filters<-list()
+  data<-c('coupon','maturity','price','yeild')
+  namesCol<-colnames(data)
+  niceNames<-as.vector(sapply(namesCol,idToName))
   filterCol = list(
                   list( id= 'coupon',
                   label= 'coupon',
